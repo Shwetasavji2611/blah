@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="age" type="number" placeholder="enter dob"/>
+    <button onclick="getAge()">Check eligiblity</button>
+    <h1 id="res"></h1>
+</body>
+</html>
+
+<script>
+
+    function getAge() {
+        let user_dob = document.getElementById("age").value;
+        let user_age= 2025-user_dob;
+        if (user_age < 18){
+          document.getElementById("res").innerText="Not eligible"
+        }
+        else if(user_age > 18){
+        document.getElementById("res").innerText="eligible"
+
+        }else{
+            document.getElementById("res").innerText=" Just eligible"
+
+        }
+    }
+</script>
